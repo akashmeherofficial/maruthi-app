@@ -1,0 +1,105 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: auto;
+    margin: 0.05em;
+    flex-wrap: wrap;
+    padding: 1em;
+    transform: scale(0.8);
+    outline: none;
+
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    background-image: linear-gradient(to top, #141414,#1414149e, #14141409);
+    z-index: 1;
+    color: white;
+
+}
+
+.price{
+    color:rgb(13, 226, 13) ;
+}
+.rating{
+    color: #f7c331;
+}
+
+.desc{
+    margin: 0.5em;
+    cursor: pointer;
+}
+.title{
+    font-size: 1.2em;
+
+}
+
+.overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 23.2em;
+    width: 17.5em;
+    justify-content: center;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.overlay button{
+    border: none;
+    outline: none;
+    background: none;
+    color: #f7c331;
+}
+
+.overlay button:hover{
+
+    color: #f7c331;
+}
+
+.quickviewbtn{
+    color:white;
+    text-decoration: none;
+}
+.quickviewbtn:hover{
+    color:#f7c331;
+
+}
+
+.overlay:hover{
+    transition: 1.2s;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.image{
+    cursor:none;
+}
+.viewbtn{
+    font-size: 1.1em;
+    border: none;
+    background-color: #f7c331;
+}
+.viewbtn:hover{
+    opacity: 1;
+    background-color: white;
+    color: #f7c331;
+    transition: 0.7s;
+    
+}
+
+.viewbtnnav:hover{
+    opacity: 1;
+    background-color: white;
+    color: #f7c331;
+    transition: 0.7s;
+    
+}
+.viewbtnnav{
+    padding:0.2em 4.3em;
+    color: white;
+    text-decoration: none;
+    
+}

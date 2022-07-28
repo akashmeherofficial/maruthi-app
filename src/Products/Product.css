@@ -1,0 +1,38 @@
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    background-image: linear-gradient(to bottom, #141414,#1414149e, #14141409);
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+}
+
+
+.heading:hover{
+    color: #f7c331;
+    letter-spacing: 0.3em;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+
+
+
+.cards{
+background-image: linear-gradient(to top, #141414,#1414149e, #14141409);
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
