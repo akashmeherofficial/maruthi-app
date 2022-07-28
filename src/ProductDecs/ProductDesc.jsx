@@ -1,9 +1,25 @@
 import React, { useState } from 'react'
 import './ProductDesc.css'
 import Img1 from '../assets/Img1.jpg'
+import Reviews from '../Reviews/Reviews'
 
 const ProductDesc = () => {
     const [count, setCount]=useState(0)
+    const [comment, updateComment] = useState(null);
+  const [comments, updateComments] = useState([]);
+
+  const onChangeHandler = (e) => {
+    updateComment(e.target.value);
+    console.log(e.target.value);
+
+  };
+
+  const addCommentToList = () => {
+    updateComments([...comments, { comment: comment, key: Date.now() }]);
+    console.log([...comments, { comment: comment, key: Date.now() }]);
+    updateComment("");
+
+  };
   return (
             <div className='pd'>
       <div className="main">
@@ -46,7 +62,7 @@ const ProductDesc = () => {
                     </span>
             </div>
                  
-                    <span className="descrating">4.5</span><span className="count">234 ratings and 598 reviews</span>
+            <span className="descrating">4.5</span><span className="count">234 ratings and 598 reviews</span>
             <p className="offershead">Available Offers:</p>
             <span className="offers">Use Axis Bank Credit Cards for 5% off. <a href="/">T & C</a></span>
             <p className="offers">Hire our Designers and get Exclusive Offers</p>
@@ -57,6 +73,8 @@ const ProductDesc = () => {
                     Quantity: 
                 {count} SQFT
                 </span>
+                <br/>
+                <span>Total Price <b>${count*9.9}</b></span>
                 <button className="add" onClick={()=>{setCount(count+5)}}>+</button>
                 <button className="add" onClick={()=>{if(count>0){setCount(count-5)}else{setCount(count)}}}>-</button>
 
@@ -66,7 +84,7 @@ const ProductDesc = () => {
             </div>
             <div className='checkpin'>
             <p className="deliver">Deliver to</p>
-            <input type="text" placeholder='Enter your Pincode' />
+            <input type="number" placeholder='Enter your Pincode' />
             <button className="wishlist check">Check</button>
             </div>
             
@@ -107,8 +125,12 @@ const ProductDesc = () => {
         </h3>
         <span className="descrating">4.5</span><span className="count">(234 ratings and 598 reviews)</span>
         <div className="comments">
-            <textarea type="text" rows='3' cols='30'  className='commentinput' placeholder='Add Your Reviews'/>
-            <button className="comment">Add Review</button>
+            <input type="text" rows='3' cols='30'  className='commentinput' placeholder='Add Your Reviews' value={comment} onChange={onChangeHandler}/>
+            <button className="comment" onClick={addCommentToList}>Add Review</button>
+            </div>
+            <div className="reviewscontainer">
+
+            <Reviews comments={comments} updateComment={updateComments}/>
             </div>
         </div>
     </div>

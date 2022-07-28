@@ -1,0 +1,23 @@
+.footer{
+    width: 100vw;
+    font-size: 0.8em;
+    height: 24em;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to top,black,#141414,#1414149e, #14141409 );
+    padding: 5em 0;
+    justify-content: space-around;
+    border: none;
+}
+
+
+li{
+    list-style: none;
+    color: darkgray;
+}
+
+.footer div{
+    margin: 3em;
+    padding: 3em;
+}

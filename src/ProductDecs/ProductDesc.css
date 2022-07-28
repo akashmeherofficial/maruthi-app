@@ -164,7 +164,7 @@ transition: 1s;
 
 .commentinput{
     margin: 0.2em 1em;
-    text-align:left;
+    text-align:center;
 }
 
 .comments button{
@@ -179,4 +179,16 @@ transition: 1s;
     border: 1px solid #f7630d;
     background-color: white;
     padding: 0.25em;
+}
+
+
+.last{
+  
+    padding: 2em;
+    background-image: linear-gradient(to top, #f7c331,#f7c23188,#f7c2312b);
+}
+
+.quantityitm{
+    padding: 0;
+    margin: 0;
 }
